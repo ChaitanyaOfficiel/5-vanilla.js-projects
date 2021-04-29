@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-image: url(Tulips.jpg);
+    height: 100vh;
+    background-size: center;
+    background-position: center;
+}
+.hero{
+top: 50%;
+left:50%;
+position: absolute;
+transform: translate(-50%,-50%);
+color: white;
+text-align: center;
+}
+h1 {
+    font-family: sans-serif;
+    font-size: 60px;
+    letter-spacing: 12px;
+}
+p{
+    font-family: sans-serif;
+    font-size: 34px;
+    letter-spacing: 12px;
+}
+hr {
+    width: 50%;
+    margin:30px auto;
+    border: 5px solid #FFF;
+}
+#launch {
+    word-spacing: 5px;
+    font-size: 18;
+}
+.menu{
+    
+    text-align: center;
+    list-style: none;
+    
+    
+}
+.menu li {
+    display: inline-block;
+    margin: 10px 5px;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    font-family: Arial;
+    letter-spacing: 2px;
+    border: 2px solid white;
+}
+.menu li a:hover{
+    background: black;
+    transition: -4s;
+}
