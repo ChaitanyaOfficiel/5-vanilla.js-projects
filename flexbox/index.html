@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice league</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <h1 class="Main_title">Justice league</h1>
+    <div class="panels">
+        <div class="panel panel1">
+            <p>superman</p>
+            <br>
+            <p>Last son of krypton</p>
+        </div>
+        <div class="panel panel2">
+            <p>Batman</p>
+            <br>
+            <p>The Dark Knight</p>
+        </div>
+        <div class="panel panel3">
+          <p>Wonder Women</p>
+          <br>
+          <p>Amazonian</p>  
+        </div>
+        <div class="panel panel4">
+            <p>Aquaman</p>
+            <br>
+            <p>King of seven oceans</p>
+        </div>
+        <div class="panel panel5">
+            <p>Flash</p>
+            <br>
+            <p>Fastest Man in planet</p>
+        </div>
+        <div class="panel panel6">
+            <p>Cyborg</p>
+            <br>
+            <p>Computerized man</p>
+        </div>
+    </div>
+    <script>
+        const panels = document.querySelectorAll('.panel');
+        function  toggleOpen() {
+            this.classList.toggle('open');
+        }
+
+
+        function toggleActive(e){
+          if(e.propertyName.includes('flex')){
+              this.classList.toggle('open-active')
+          }
+        }
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));
+    </script>
+</body>
+</html>
