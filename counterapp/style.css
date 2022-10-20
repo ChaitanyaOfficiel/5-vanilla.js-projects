@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body{
+      color: #faf0ca; 
+      background-color: #0d3b66;
+      font-family: Noto Sans;
+}
+.counter{
+      top: 50%;
+      left:50%;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      text-align: center;
+}
+h3{
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+}
+p{
+      font-size: 24px;
+      letter-spacing: 6px;
+}
+@media screen and (max-width:420px) {
+      h3{
+            font-size: 24px;
+            letter-spacing: 1px;
+      }
+      p{
+            font-size: 18px;
+            letter-spacing: 1px;
+      }
+}

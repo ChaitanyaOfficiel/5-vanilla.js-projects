@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CounterApp</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div id="celebrate" class="counter">
+      <h3>Hindu new Year</h3>
+      <hr/>
+      <p id="counting"></p>
+    </div>
+    <script>
+      var countDate = new Date('March 22, 2023').getTime()
+      var interval = setInterval(function (){
+            var GMT = new Date()
+            var IST = 330
+            offset = IST * 60 * 1000
+            var ISTtime = new Date(GMT.getTime() + offset)
+            var gap = countDate - ISTtime
+            var days = Math.floor(gap / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((gap % (1000 * 60 * 60 *24))/(1000* 60 *60));
+            var minutes = Math.floor((gap % (1000 * 60 * 60))/ (1000 * 60));
+            var seconds = Math.floor((gap % (1000 * 60)) / 1000);
+            document.getElementById('counting').innerHTML = days + " d " + hours + ' h ' +
+            minutes + " m " + seconds + " s "
+            if(gap < 0){
+                  clearInterval(interval)
+                  document.getElementById('counting').innerHTML = 'Change the Date'
+            }
+
+      })
+    </script>
+</body>
+</html>
